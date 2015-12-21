@@ -67,7 +67,13 @@ public class BubblePopActivity extends Activity {
         mGestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                return super.onFling(e1, e2, velocityX, velocityY);
+                for(int i =0; i < mainFrame.getChildCount(); i++){
+                    BubbleView childBubbleView = (BubbleView) mainFrame.getChildAt(i);
+                    if(childBubbleView.intersects(e1.getX(), e1.getY())){
+                        childBubbleView.deflect(velocityX, velocityY);
+                        return true;
+                    }
+                }
             }
 
             @Override
@@ -140,6 +146,10 @@ public class BubblePopActivity extends Activity {
 
         public void start() {
 
+
+        }
+
+        public void deflect(float velocityX, float velocityY) {
             
         }
     }
