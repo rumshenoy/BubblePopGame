@@ -33,6 +33,8 @@ public class BubblePopActivity extends Activity {
     private SoundPool mSoundPool;
     private GestureDetector mGestureDetector;
 
+    private int mDisplayWidth, mDisplayHeight;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,7 @@ public class BubblePopActivity extends Activity {
                         return true;
                     }
                 }
+                return false;
             }
 
             @Override
@@ -92,6 +95,15 @@ public class BubblePopActivity extends Activity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus){
+            mDisplayHeight = mainFrame.getHeight();
+            mDisplayWidth = mainFrame.getWidth();
+        }
     }
 
     @Override
@@ -150,7 +162,7 @@ public class BubblePopActivity extends Activity {
         }
 
         public void deflect(float velocityX, float velocityY) {
-            
+
         }
     }
 }
