@@ -1,4 +1,4 @@
-package course.labs.graphicslab;
+package com.example.BubblePopGame;
 
 import java.util.Random;
 import java.util.concurrent.Executors;
@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.*;
 import android.widget.RelativeLayout;
+import com.example.BubblePopGame.R;
 
 public class BubbleActivity extends Activity {
 
