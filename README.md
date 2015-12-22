@@ -7,4 +7,4 @@ This is a simple game on Android with bubbles. I learnt it by taking a course on
 Start up the game and a plain background should appear. On clicking on various points on the screen bubbles pop up in different sizes. These bubbles keep floating around in random directions. You can then pop these bubbles by clicking on them again. You can even fling the bubbles in a particular direction by dragging the bubble across the screen. 
 
 ### Screenshot:
-
+![BubblePopGame Screenshot](https://cloud.githubusercontent.com/assets/1961478/11946346/88140692-a80e-11e5-8b51-ea7709e52a55.png)
